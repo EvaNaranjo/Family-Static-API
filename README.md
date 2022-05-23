@@ -61,7 +61,7 @@ class Family:
     def add_member(self, member):
         ## you have to implement this method
         ## append the member to the list of _members
-        pass
+        
 
     def delete_member(self, id):
         ## you have to implement this method
