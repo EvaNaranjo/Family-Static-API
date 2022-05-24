@@ -30,7 +30,7 @@ def get_all_members():
 
     # this is how you can use the Family datastructure by calling its methods
     members = jackson_family.get_all_members()
-    if memebers is None:
+    if members is None:
         return jsonify ("Server error"),500
     elif members == False:
         return jsonify("Members do not exist"),400
@@ -40,7 +40,7 @@ def get_all_members():
 @app.route('/member/<int:id>', methods=['GET'])
 def get_member(id):    
     member = jackson_family.get_member(id)
-    if memeber is None:
+    if member is None:
         return jsonify ("Server error"),500
     elif member == False:
         return jsonify("Member does not exist"),400
@@ -51,7 +51,7 @@ def get_member(id):
 def add_member():    
     body=request.get_json()
     members = jackson_family.add_member(body)
-    if memeber is None:
+    if member is None:
         return jsonify ("Server error"),500
     elif member == False:
         return jsonify("Member does not exist"),400
@@ -61,7 +61,7 @@ def add_member():
 @app.route('/member/', methods=['DELETE'])
 def delete_member(id):    
     members = jackson_family.delete_member(id)
-    if memeber is None:
+    if member is None:
         return jsonify ("Server error"),500
     elif member == False:
         return jsonify("Member does not exist"),400
